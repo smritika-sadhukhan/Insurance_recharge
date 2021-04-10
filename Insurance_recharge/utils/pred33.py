@@ -6,9 +6,9 @@ import pickle
 from keras_contrib.losses import  crf_loss
 from keras_contrib.metrics import crf_viterbi_accuracy
 
-word_to_index=pickle.load(open('/content/Insurance_recharge/Insurance_recharge/Files/word_to_index.pickle','rb'))
-tag_to_index=pickle.load(open('/content/Insurance_recharge/Insurance_recharge/Files/tag_to_index.pickle','rb'))
-model= load_model('/content/Insurance_recharge/Insurance_recharge/model/model.h5',custom_objects={'CRF':CRF, 
+word_to_index=pickle.load(open('Insurance_recharge/Insurance_recharge/Files/word_to_index.pickle','rb'))
+tag_to_index=pickle.load(open('Insurance_recharge/Insurance_recharge/Files/tag_to_index.pickle','rb'))
+model= load_model('Insurance_recharge/Insurance_recharge/model/model.h5',custom_objects={'CRF':CRF, 
                                                   'crf_loss':crf_loss, 
                                                   'crf_viterbi_accuracy':crf_viterbi_accuracy})
 
